@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="card border-secondary mb-3" style="max-width: 20rem;">
+  <div class="card-header">{{ thread.subject }}</div>
+  <div class="card-body">
+    <h4 class="card-title">par {{ thread.author }}, le {{ thread.datetime| date("d/m/Y") }}</h4>
+    <p class="card-text">{{ thread.text }}</p>
+  </div>
+</div>
+{% endblock %}
